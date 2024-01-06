@@ -37,8 +37,8 @@ const TeamMemberDetails = () => {
             <div className='bg-stone-100 '>
 
                 <div className='flex flex-col' >
-                    <div className=' mt-32'>
-                        <div className='flex  flex-col ml-32 gap-5'>
+                    <div className='sm:mt-20 mt-10 md:mt-32'>
+                        <div className='flex  flex-col sm:ml-10 ml-10 md:ml-32 gap-5'>
                             <div className='flex gap-1'>
                                 <FaHome className='m-1' />
                                 <span>|</span>
@@ -53,10 +53,10 @@ const TeamMemberDetails = () => {
 
                     <div className='h-auto w-screen  pb-20 pt-12'>
                         <p></p>
-                        <div className='flex h-screen bg-white ml-60 flex-row'>
-                            <img src={`${member.image}`} alt={member.name || ''} className='-ml-20 rounded-lg h-1/2 w-auto mt-20 mix-blend-darken' />
+                        <div className='flex  h-auto md:h-screen bg-white  md:ml-60 flex-col md:flex-row'>
+                            <img src={`${member.image}`} alt={member.name || ''} className='-ml-20 rounded-lg h-1/2 w-auto md:mt-20 mix-blend-darken' />
 
-                            <div className='flex flex-col mt-20 ml-12'>
+                            <div className='flex flex-col mt-5 md:mt-20 ml-12'>
                                 <p className='text-xl mb-10'>{position}</p>
                                 <div className='mb-5'>
                                     <span className='text-4xl  border-b-2  border-red-500 '>{firstLetter},{name}</span>

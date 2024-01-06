@@ -77,12 +77,17 @@ const AboutSummary = () => {
         </div>
         <img src={Aboutimg} alt=" chs school kanpur" className='hidden lg:block rounded-2xl w-full md:w-1/2 lg:w-1/3 ml-0 md:ml-32 lg:ml-0 mt-4 lg:mt-0' />
       </div>
-      <div className='text-4xl md:text-5xl lg:text-9xl ml-24 md:ml-96 -mt-10 absolute text-white hover:text-green-700 hover:opacity-100 opacity-70 border-b-2   hover:border-orange-300 cursor-pointer'>
+     <div className='mt-10 items-center w-screen justify-center flex lg:hidden sm:hidden md:flex xl:flex relative'>
+     <img src={Aboutimg2} alt="" className='h-24 lg:h-32  mix-blend-darken    -mt-8' />
+
+     <div className='text-3xl md:text-5xl    xl:text-9xl   2xl:text-9xl lg:text-9xl  flex items-center      text-green-700 md:text-white hover:text-green-700 hover:opacity-100 opacity-70 border-b-2   hover:border-orange-300 cursor-pointer'>
+        <span className="items-center flex">
+
         Back to School
+        </span>
       </div>
-      <img src={Aboutimg2} alt="" className='h-24 lg:h-32 absolute mix-blend-darken left-6  lg:left-64 -mt-8' />
-      <img src={Aboutimg2} alt="" className='h-24 lg:h-32 absolute mix-blend-darken left-3/4 lg:left-3/4 ml-0 md:ml-20 -mt-8' />
-      {/* <div
+      <img src={Aboutimg2} alt="" className='h-24 lg:h-32  mix-blend-darken left-3/4 lg:left-3/4 ml-0  -mt-8' />
+      </div>{/* <div
         ref={videoRef}
         className='relative overflow-hidden rounded-lg mx-auto my-6 bg-stone-100  md:my-12 lg:my-24 w-full h-72 lg:h-auto'
       >

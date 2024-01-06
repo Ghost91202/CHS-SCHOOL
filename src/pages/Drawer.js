@@ -84,7 +84,7 @@ const DrawerComponent = () => {
         </div>
       </div>
 
-      <DrawerWrapper isOpen={isOpen}>
+      <DrawerWrapper isOpen={isOpen} className='overflow-y-scroll'>
         <CloseButton onClick={toggleDrawer}>&times;</CloseButton>
         <DrawerContent>
           {/* Your drawer content goes here */}

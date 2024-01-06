@@ -10,7 +10,7 @@ import "./ImageCarousel.css"
 
 function Component() {
   return (
-    <div className="-z-1 md:-z-10    rounded-none  sm:h-64 xl:h-screen 2xl:h-screen h-72 overflow-hidden md:overflow-hidden h-96 md:h-screen overflow-hidden ">
+    <div className="-z-1 md:-z-10    rounded-none  sm:h-64 xl:h-screen 2xl:h-screen h-62  md:overflow-hidden  md:h-screen overflow-hidden ">
 
       <Carousel leftControl="" rightControl="" className='md:h-screen h-72 grid grid-1 -z-1 relative md:ml-14 md:mt-12 overflow-hidden' >
 
