@@ -1,0 +1,50 @@
+/* ImageCarousel.css */
+
+.opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+  }
+
+
+  /* underlines1 css  */
+
+  .underlines1 {
+    position: relative;
+  }
+  .underlines1::after {
+    content: "";
+    position: absolute;
+    bottom: -0.125rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underlines1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  p > .underlines1 {
+    font-weight: 400;
+  }
+  p > .underlines1::after {
+    bottom: -0.2rem;
+    height: 0.5rem;
+    left: -0.25rem;
+    right: -0.25rem;
+  }
+  
+
+  /* underline animation for value */
+
+  .underline-slider {
+    height: 2px;
+    width: 0;
+    margin-top: 10px;
+    background-color: #ff1010; /* Change the color as needed */
+    transition: width 0.3s ease; /* Adjust the animation speed as needed */
+  }
+  
