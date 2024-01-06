@@ -12,27 +12,27 @@ const Navbar = () => {
             <img src={Logo} alt="chs school" className='h-14 mt-1' />
           </a>
         </div>
-        <div className='mt-4 text-md flex gap-12 hidden md:flex'>
+        <div className='mt-4 text-md flex gap-12 hidden justify-center md:flex'>
           <a href="/About">About US</a>
           <a href="/">Admission</a>
           <a href="/mb">Administration</a>
           <a href="/fees">Tuition fees</a>
           <a href="/">Contact</a>
         </div>
-        <div className='flex mr-4 gap-3 mt-2'>
-          <a href="/register" className='bg-red-600 h-10 p-2 text-white font-semibold'>Apply Now</a>
-          <a href="" className='p-2 underline-offset-2 hover:underline hover:text-red-600'> ENG</a>
+        <div className='flex mr-4 justify-center gap-3 mt-2'>
+          <a href="/register" className='bg-red-600 md:h-10 md:p-2 h-8 p-1  text-white font-semibold'>Apply Now</a>
+          <a href="" className='md:p-2 p-1 underline-offset-2 hover:underline hover:text-red-600'> ENG</a>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       <div className="md:hidden">
-        <div className="flex justify-center gap-3 bg-stone-100 p-2">
-          <a href="/About">About</a>
-          <a href="/">Admission</a>
-          <a href="/fees">Tuition fees</a>
-          <a href="/mb">Administration</a>
-          <a href="/">Contact</a>
+        <div className="flex justify-center gap-3 w-auto pl-20 pr-10 overflow-x-scroll bg-stone-100 ">
+          <a href="/About" className='w-auto  '>About</a>
+          <a href="/" className='w-auto '>Admission</a>
+          <a href="/fees" className='w-auto'>fees</a>
+          <a href="/mb" className='w-auto '>Administration</a>
+          <a href="/" className='w-auto '>Contact</a>
         </div>
       </div>
     </div>

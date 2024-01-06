@@ -188,9 +188,9 @@ const RegistrationForm = () => {
 
 
   return (
-    <div className='flex relative w-screen overflow-hidden'>
+    <div className=' relative w-screen overflow-hidden'>
       <Navbar />
-      <div className='flex flex-col ml-40 mt-20'>
+      <div className='flex flex-col ml-10 md:ml-40 mt-10 md:mt-20'>
 
         <div className='flex flex-col gap-5'>
           <div className='flex gap-1'>
@@ -200,10 +200,10 @@ const RegistrationForm = () => {
             <span>|</span>
             <div>Apply</div>
           </div>
-          <h1 className='text-7xl'>Apply Now</h1>
+          <h1 className='md:text-7xl text-4xl'>Apply Now</h1>
         </div>
 
-        <div className='m-20 flex flex-col justify-center text-md font-semibold '>
+        <div className='md:m-20 flex flex-col justify-center text-md font-semibold '>
           {/* <div className=''>
             <label>Role:</label>
             <select name="role" value={formData.role} onChange={handleChange}>
@@ -213,7 +213,7 @@ const RegistrationForm = () => {
             <br />
           </div> */}
 
-          <div className=' bg-gray-100 p-32'>
+          <div className=' bg-gray-100   p-10 m-5 md:p-32'>
             <form onSubmit={handleSubmit} encType="multipart/form-data">
               {errorMessages.length > 0 && (
                 <div style={{ color: 'red', marginBottom: '10px' }}>
@@ -228,8 +228,8 @@ const RegistrationForm = () => {
               {/* Add the role dropdown */}
 
               
-              <div className='flex  w-full gap-20 '>
-                <div className='flex flex-col w-96'>
+              <div className='flex flex-col md:flex-row w-full gap-5   md:gap-20 '>
+                <div className='flex flex-col md:w-96'>
                   <label>Email <span className='text-red-500'>*</span></label>
                   <input type="email" name="email" value={formData.email} onChange={handleChange} required className='bg-transparent underline-2 underline border-b-2 border-black' />
                   <br />
@@ -269,9 +269,9 @@ const RegistrationForm = () => {
                   )}
                   <br />
                 </div>
-                <div className='flex flex-col w-96  '>
-                <div className='bg-stone-50 p-20 flex h-96 w-screen md:-z-10 -mt-80 ml-10 font-semibold'>
-                    <div className='text-lg w-96 text-justify '>If you have any questions, please don't hesitate to get in touch via 8 000 000 0000 or <span className='text-red-500'>
+                <div className='flex flex-col md:w-96  '>
+                <div className='bg-stone-50 p-20 flex h-96 md:flex hidden w-screen md:-z-10 -mt-80 ml-10 font-semibold'>
+                    <div className='text-lg md:w-96 text-justify '>If you have any questions, please don't hesitate to get in touch via 8 000 000 0000 or <span className='text-red-500'>
                     admissions@CHS.com</span></div>
                   </div>
                   {/* Additional fields for student role */}

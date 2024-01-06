@@ -71,10 +71,10 @@ import axios from 'axios'; const LoginForm = ({ onLogin }) => {
 
 
   return (
-    <div className='flex relative w-screen overflow-hidden h-screen' >
+    <div className=' relative w-screen overflow-hidden h-screen' >
 
       <Navbar />
-      <div className='flex flex-col ml-40 mt-20'>
+      <div className='flex flex-col ml-10 md:ml-40 mt-10 md:mt-20'>
 
 
         <div className='flex flex-col gap-5'>
@@ -85,10 +85,10 @@ import axios from 'axios'; const LoginForm = ({ onLogin }) => {
             <span>|</span>
             <div>Apply</div>
           </div>
-          <h1 className='text-7xl'>Apply Now</h1>
+          <h1 className='md:text-7xl text-3xl'>Apply Now</h1>
         </div>
         <div className='flex'>
-          <div className='text-md font-semibold bg-gray-100 p-10 m-32 w-3/4 '>
+          <div className='text-md font-semibold bg-gray-100 p-10 m-10 md:m-32 w-3/4 '>
 
             <form onSubmit={handleSubmit}>
               <div className='flex gap-2 flex-col'>
