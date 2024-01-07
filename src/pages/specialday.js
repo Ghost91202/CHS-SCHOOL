@@ -1,84 +1,374 @@
-import React from 'react'
-import Navbar from "./navbar"
-import { FaHome } from "react-icons/fa";
-import calenderimg from "../assets/calenderimg.jpg"
-import { IoIosArrowRoundForward } from "react-icons/io";
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../components/Slider.css';
+import Navbar from "../pages/specialday"
+gsap.registerPlugin(ScrollTrigger);
 
-const specialday = () => {
-    return (
-        <div className='relative'>
-            <Navbar />
+const randomIntFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
-            <div className='flex '>
-                <div className='mt-32'>
-                    <div className='flex flex-col md:ml-32 ml-10 gap-5'>
-                        <div className='flex gap-1'>
-                            <FaHome className='m-1' />
-                            <span>|</span>
-                            <div>Academic</div>
-                        </div>
-                        <h1 className='text-7xl '>Calender </h1>
-                    </div>
+const animateSingleContainer = () => {
+  const singleContainer = document.querySelector('.container.single');
 
-                    <div className='flex relative mt-20'>
-                        <img src={calenderimg} alt="chs school" className=" max-h-auto md:w-screen h-96 md:h-screen object-cover" />
-                        <div className="absolute inset-0 h-auto bg-black opacity-60"></div>
+  if (singleContainer) {
+    const innerContainer = singleContainer.querySelector('.inner-container');
+    const sections = gsap.utils.toArray('.container.single .panel');
 
-                        <div className='absolute text-white  flex md:flex-row flex-col md:gap-20 md:p-20 '>
-                            <div>
-                                <h1 className='md:text-6xl border-2 shadow-2xl shadow-green-900 drop-shadow-2xl border-gray-300 p-5'>
-                                    Special Assemblies
-                                </h1>
-                            </div>
-                            <div className='flex md:ml-20 ml-5 mt-5 md:gap-10   h-screen  flex-col'>
-                                <h1 className='md:text-5xl text-5xl w-72 underline'>Month Name</h1>
-                                <p >
-                                    <ol className='flex flex-col gap-4 text-xl w-96 md:w-full text-justify mt-4 md:mt-8'>
-                                        <li className='flex'>April  <IoIosArrowRoundForward className='text-3xl' /></li>
-                                        <li className='flex'>May  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>May  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>August  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>August  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>August  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>September  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>September  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>October  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>November  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>December  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>January  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                        <li className='flex'>February  <IoIosArrowRoundForward className='text-3xl' /> </li>
-                                    </ol>
-                                </p>
+    gsap.to(sections, {
+      scrollTrigger: {
+        trigger: singleContainer,
+        pin: true,
+        start: 'top top',
+        end: () => '+=' + (innerContainer.offsetHeight - window.innerHeight),
+        scrub: 1,
+      },
+      width: '100vw',
+      height: '100vh',
+    });
 
-                            </div>
-                            <div className='flex md:ml-20 hidden md:flex md:mt-7 gap-10  h-screen   flex-col'>
-                                <h1 className='md:text-5xl   underline'>Topic</h1>
-                                <p >
-                                    <ul className='flex flex-col gap-4 text-xl w-96 md:w-full text-justify mt-4 md:mt-8'>
-                                        <li>Earth Day</li>
-                                        <li>Labour Day</li>
-                                        <li>Mother's Day</li>
-                                        <li>Raksha Bandhan</li>
-                                        <li>Janmashtami</li>
-                                        <li>Independence Day</li>
-                                        <li>Hindi Diwas</li>
-                                        <li>Teacher's Day</li>
-                                        <li>Diwali</li>
-                                        <li>Children's Day</li>
-                                        <li>Christmas</li>
-                                        <li>Republic Day</li>
-                                        <li>Basant Panchami</li>
-                                    </ul>
-                                </p>
-                            </div>
+    sections.forEach((section) => {
+      gsap.fromTo(
+        section,
+        {
+          x: () => window.innerWidth / 10,
+        },
+        {
+          x: () => -1 * (innerContainer.offsetWidth - window.innerWidth),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: singleContainer,
+            start: 'top 65%',
+            pin: false,
+            scrub: 1,
+            end: () => '+=' + (innerContainer.offsetHeight + window.innerHeight / 2),
+          },
+        }
+      );
 
-                        </div>
+      const rndVH = randomIntFromInterval(5, 50);
+      gsap.fromTo(
+        section,
+        {
+          opacity: 1,
+          x: rndVH + 'vw',
+        },
+        {
+          opacity: 1,
+          x: '0',
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: singleContainer,
+            start: 'top 50%',
+            markers: false,
+            pin: false,
+            scrub: 1,
+            end: 'center 25%',
+          },
+        }
+      );
+    });
+  }
+};
 
-                    </div>
-                </div>
-            </div>
+
+
+
+
+const animateDoubleContainer = () => {
+  const doubleContainer = document.querySelector('.container.double');
+
+  if (doubleContainer) {
+    const innerContainer = doubleContainer.querySelector('.inner-container');
+    const topRow = doubleContainer.querySelector('.container.double .row--top');
+    const bottomRow = doubleContainer.querySelector('.container.double .row--bottom');
+    const topSections = gsap.utils.toArray('.container.double .row--top .panel');
+    const bottomSections = gsap.utils.toArray('.container.double .row--bottom .panel');
+
+    topSections.forEach((section) => {
+      const rndEND = randomIntFromInterval(10, 14);
+      const rndSTART = randomIntFromInterval(10, 14);
+      const endMultiplier = rndEND / 100;
+      const startMultiplier = rndSTART / 10;
+
+      gsap.fromTo(
+        section,
+        {
+          x: () => window.innerWidth / startMultiplier,
+        },
+        {
+          x: () => -1 * (topRow.offsetWidth - window.innerWidth),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: doubleContainer,
+            markers: false,
+            start: 'top bottom',
+            pin: false,
+            scrub: 1,
+            end: 'bottom center',
+          },
+        }
+      );
+
+      const rndVH = randomIntFromInterval(5, 20);
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: rndVH + 'vh',
+        },
+        {
+          opacity: 1,
+          y: '0',
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: innerContainer,
+            start: 'top bottom',
+            markers: false,
+            pin: false,
+            scrub: 1,
+            end: 'top 45%',
+          },
+        }
+      );
+    });
+
+    bottomSections.forEach((section) => {
+      const rndEND = randomIntFromInterval(10, 12);
+      const rndSTART = randomIntFromInterval(10, 12);
+      const endMultiplier = rndEND / 10;
+      const startMultiplier = rndSTART / 10;
+
+      gsap.fromTo(
+        section,
+        {
+          x: () => -1 * (bottomRow.offsetWidth * startMultiplier),
+        },
+        {
+          x: () => bottomRow.offsetWidth - window.innerWidth,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: doubleContainer,
+            markers: false,
+            start: 'top 70%',
+            pin: false,
+            scrub: 1,
+            end: 'bottom top',
+          },
+        }
+      );
+
+      const rndVH = randomIntFromInterval(5, 20);
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: rndVH + 'vh',
+        },
+        {
+          opacity: 1,
+          y: '0',
+          ease: 'power2.inOut',
+          scrollTrigger: {
+            trigger: innerContainer,
+            start: 'center bottom',
+            markers: false,
+            pin: false,
+            scrub: 1,
+            end: 'center center',
+          },
+        }
+      );
+    });
+  }
+};
+
+const SpecialDay = () => {
+  useEffect(() => {
+    animateSingleContainer();
+    animateDoubleContainer();
+  }, []);
+
+  return (
+    <div className='relative'>
+
+      <Navbar/>
+      <div className="firstContainer md:mt-20 md:ml-32">
+        <h1>Scroll Down</h1>
+      </div>
+
+      <div className="container single">
+        <a className="jump-btn" href="#skip">
+          Skip
+        </a>
+        <div className="inner-container">
+          <div className="container-text">
+            <h1>We Look to the Future, Shoot from the Hip, Then Build by Hand</h1>
+          </div>
+          <section className="panel behind width--thin height--short">
+            <figure>
+              <img src="https://picsum.photos/1200/650" alt="image" />
+            </figure>
+          </section>
+          <section class="panel width--small height--tall">
+            <figure>
+              <img src="https://picsum.photos/1200/640" />
+            </figure>
+          </section>
+          <section class="panel behind width--extra-wide height--extra-tall">
+            <figure>
+              <img src="https://picsum.photos/1200/660" />
+            </figure>
+          </section>
+          <section class="panel behind width--normal height--tall">
+            <figure>
+              <img src="https://picsum.photos/1200/620" />
+            </figure>
+          </section>
+          <section class="panel width--small height--extra-tall">
+            <figure>
+              <img src="https://picsum.photos/1200/700" />
+            </figure>
+          </section>
+          <section class="panel width--normal height--extra-short">
+            <figure>
+              <img src="https://picsum.photos/1200/690" />
+            </figure>
+          </section>
+          <section class="panel behind width--normal height--normal">
+            <figure>
+              <img src="https://picsum.photos/1200/670" />
+            </figure>
+          </section>
+          <section class="panel behind width--thin height--short">
+            <figure>
+              <img src="https://picsum.photos/1200/710" />
+            </figure>
+          </section>
+          <section class="panel width--small height--tall">
+            <figure>
+              <img src="https://picsum.photos/1200/740" />
+            </figure>
+          </section>
+          <section class="panel behind width--extra-wide height--extra-tall">
+            <figure>
+              <img src="https://picsum.photos/1200/680" />
+            </figure>
+          </section>
+          <section class="panel behind width--normal height--tall">
+            <figure>
+              <img src="https://picsum.photos/1200/615" />
+            </figure>
+          </section>
+          <section class="panel width--small height--extra-tall">
+            <figure>
+              <img src="https://picsum.photos/1200/720" />
+            </figure>
+          </section>
+          <section class="panel width--normal height--extra-short">
+            <figure>
+              <img src="https://picsum.photos/1200/675" />
+            </figure>
+          </section>
+          <section class="panel behind width--normal height--normal">
+            <figure>
+              <img src="https://picsum.photos/1200/635" />
+            </figure>
+          </section>
         </div>
-    )
+      </div>
+      <div id="skip"></div>
+
+      <div className="firstContainer">
+        <h1>Keep scrolling</h1>
+      </div>
+
+      <section className="container double">
+        <div className="inner-container">
+          <div className="container-text">
+            <h1>We Look to the Future, Shoot from the Hip, Then Build by Hand</h1>
+          </div>
+          <div className="row--top">
+            <section className="panel behind width--thin height--short direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/652" alt="image" />
+              </figure>
+            </section>
+            <section class="panel width--small height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/642" />
+              </figure>
+            </section>
+            <section class="panel behind width--extra-wide height--extra-tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/662" />
+              </figure>
+            </section>
+            <section class="panel behind width--normal height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/622" />
+              </figure>
+            </section>
+            <section class="panel width--normal height--extra-short direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/692" />
+              </figure>
+            </section>
+            <section class="panel behind width--normal height--normal direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/672" />
+              </figure>
+            </section>
+            <section class="panel behind width--normal height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/622" />
+              </figure>
+            </section>
+          </div>
+          <div className="row--bottom">
+            <section className="panel behind width--thin height--short direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/651" alt="image" />
+              </figure>
+            </section>
+            <section class="panel width--small height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/641" />
+              </figure>
+            </section>
+            <section class="panel behind width--extra-wide height--extra-tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/661" />
+              </figure>
+            </section>
+            <section class="panel behind width--normal height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/621" />
+              </figure>
+            </section>
+            <section class="panel width--normal height--extra-short direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/691" />
+              </figure>
+            </section>
+            <section class="panel behind width--normal height--normal direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/671" />
+              </figure>
+            </section>
+            <section class="panel width--small height--tall direction--right">
+              <figure>
+                <img src="https://picsum.photos/1200/641" />
+              </figure>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="lastContainer">
+      </div>
+    </div>
+  )
 }
 
-export default specialday
+export default SpecialDay

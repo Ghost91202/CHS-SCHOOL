@@ -96,8 +96,7 @@ const DrawerComponent = () => {
                 <a href="/">About</a>
                 <a href="/">Mission and values</a>
                 <a href="/">School calendar</a>
-                <a href="/">School accreditations</a>
-                <a href="/">Quality assurance department</a>
+                <a href="/CHS/SchoolTiming">School Timing</a>
                 <a href="/">Contacts</a>
               </div>
             </div>
@@ -134,7 +133,7 @@ const DrawerComponent = () => {
 
               <div className="flex flex-col gap-2">
                 <a href="/">News</a>
-                <a href="/">Gallery</a>
+                <a href="/cbse/Gallery">Gallery</a>
                 <a href="/">Articles</a>
 
               </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <div className='mt-4 text-md flex gap-12 hidden justify-center md:flex'>
           <a href="/About">About US</a>
-          <a href="/">Admission</a>
+          <a href="/chs/Admission">Admission</a>
           <a href="/mb">Administration</a>
           <a href="/fees">Tuition fees</a>
           <a href="/">Contact</a>

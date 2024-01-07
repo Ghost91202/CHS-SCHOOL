@@ -163,7 +163,7 @@ const RegistrationForm = () => {
       });
 
       const response = await axios.post(
-        formData.role === 'student' ? 'http://localhost:5000/register' : 'http://localhost:5000/register-admin',
+        formData.role === 'student' ? 'https://chs-backend-green.vercel.app/register' : 'https://chs-backend-green.vercel.app/register-admin',
         formDataToSend
       );
 

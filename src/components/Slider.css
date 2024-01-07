@@ -1,0 +1,210 @@
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffb300b0;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: #ffb300b0;
+}
+
+.container.single {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  perspective: 800px; /* Added perspective for 3D effect */
+}
+.container.single .inner-container {
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+.container.single .jump-btn {
+  z-index: 5;
+  white-space: nowrap;
+  min-width: 5rem !important;
+  height: 5rem;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 3rem;
+  color: #282623;
+  bottom: 3rem;
+  background-color: #fff4e4;
+  text-decoration: none;
+}
+.container.single .container-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  z-index: 2;
+  mix-blend-mode: color-burn;
+  max-width: 100vw;
+}
+.container.single .panel {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(0); /* Fix for disappearing elements */
+}
+.container.single .panel.behind {
+  z-index: 1;
+}
+.container.single .panel figure {
+  width: 100%;
+}
+.container.single .panel video,
+.container.single .panel img {
+  height: 60vh;
+  max-height: 95vh;
+  width: 100%;
+  object-fit: cover;
+}
+.container.single .panel.width--thin {
+  width: 300px;
+}
+.container.single .panel.width--small {
+  width: 500px;
+}
+.container.single .panel.width--normal {
+  width: 700px;
+}
+.container.single .panel.width--wide {
+  width: 900px;
+}
+.container.single .panel.width--extra-wide {
+  width: 1100px;
+}
+.container.single .panel.height--extra-short video,
+.container.single .panel.height--extra-short img {
+  height: 20vh;
+}
+.container.single .panel.height--short video,
+.container.single .panel.height--short img {
+  height: 40vh;
+}
+.container.single .panel.height--normal video,
+.container.single .panel.height--normal img {
+  height: 60vh;
+}
+.container.single .panel.height--tall video,
+.container.single .panel.height--tall img {
+  height: 75vh;
+}
+.container.single .panel.height--extra-tall video,
+.container.single .panel.height--extra-tall img {
+  height: 90vh;
+}
+
+.container.double {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+.container.double .inner-container {
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container.double .row--bottom,
+.container.double .row--top {
+  z-index: 2;
+  height: 50vh;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  z-index: 1;
+  position: relative;
+  align-items: center;
+}
+.container.double .container-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  z-index: 6;
+  mix-blend-mode: color-burn;
+  max-width: 100vw;
+}
+.container.double .panel {
+  position: relative;
+  z-index: 7;
+  width: 700px;
+  max-width: 200vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container.double .panel.behind {
+  z-index: 1;
+}
+.container.double .panel figure {
+  width: 100%;
+  height: 100%;
+}
+.container.double .panel video,
+.container.double .panel img {
+  height: 100%;
+  max-height: 55vh;
+  width: 100%;
+  object-fit: cover;
+}
+.container.double .panel.width--thin {
+  width: 150px;
+}
+.container.double .panel.width--small {
+  width: 250px;
+}
+.container.double .panel.width--normal {
+  width: 350px;
+}
+.container.double .panel.width--wide {
+  width: 450px;
+}
+.container.double .panel.width--extra-wide {
+  width: 600px;
+}
+.container.double .panel.height--extra-short {
+  height: 45%;
+}
+.container.double .panel.height--short {
+  height: 60%;
+}
+.container.double .panel.height--normal {
+  height: 70%;
+}
+.container.double .panel.height--tall {
+  height: 85%;
+}
+.container.double .panel.height--extra-tall {
+  height: 100%;
+}
