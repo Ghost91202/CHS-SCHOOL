@@ -1,0 +1,161 @@
+
+  
+.cursor {
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    pointer-events: none;
+    
+    opacity: 0;
+  }
+  
+  .cursor__media {
+    /* position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; */
+    /* object-fit: cover; */
+    opacity: 0;
+margin-top: -20vw;
+    transition: opacity 0.5s;
+  }
+  
+  .cursor__media.active {
+    opacity: 0.8;
+  }
+/*   
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.6rem;
+  }
+   */
+  .nav__link {
+    position: relative;
+    color: #1e293b;
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  /* .nav__link:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    bottom: -1.3rem;
+    left: 0;
+    right: 0;
+    width: 2rem;
+    height: 2px;
+    margin-inline: auto;
+    background-color: #94a3b8;
+  } */
+  
+
+
+  
+  .vh-100 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .vh-100.blue {
+    background: blue;
+  }
+  .vh-100.red {
+    background: red;
+  }
+  
+  #numbers {
+    position: relative;
+    height: 420px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+  #numbers .scroller {
+    flex-basis: calc(45% - 4rem);
+    width: calc(45% - 4rem);
+    margin-right: auto;
+    padding: 0 3rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  #numbers .number-slide {
+    height: 420px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #numbers .number-slide h2 {
+    margin-bottom: 0;
+    line-height: 1;
+    color: rgba(142, 156, 156, 0.25);
+    letter-spacing: 3px;
+    font-size: 12.5rem;
+  }
+  #numbers .number-slide p {
+    line-height: 1.2;
+    margin-bottom: 0;
+    letter-spacing: 3px;
+    margin-top: -2.3125rem;
+    font-size: 1.3125rem;
+  }
+  #numbers .static {
+    flex-basis: 55%;
+    width: 55%;
+    margin-left: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  #numbers .static img {
+    height: 100%;
+    width: calc(100% - 4.875rem);
+    object-fit: cover;
+  }
+  #numbers .static .indicators {
+    height: 420px;
+    width: 0.875rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  #numbers .static .indicator {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    margin: 6px 0;
+    border: 3px solid #8E9C9C;
+  }
+
+
+
+
+
+
+
+
+
+  

@@ -96,8 +96,21 @@ const DrawerComponent = () => {
                 <a href="/">About</a>
                 <a href="/">Mission and values</a>
                 <a href="/">School calendar</a>
-                <a href="/CHS/SchoolTiming">School Timing</a>
+                <a href="/Gallery">Gallery</a>
+                
                 <a href="/">Contacts</a>
+                <a href="/Activities">Activities</a>
+              </div>
+            </div>
+            <div className='flex flex-col gap-5'>
+              <h1 className='font-bold text-xl'>About School</h1>
+
+              <div className="flex flex-col gap-2">
+                <a href="/Timing">SchoolTiming</a>
+                <a href="/">Administration</a>
+                <a href="/">Primary</a>
+                <a href="/">Secondary</a>
+
               </div>
             </div>
             <div className='flex flex-col gap-5'>
@@ -123,9 +136,9 @@ const DrawerComponent = () => {
                 </a>
                 <a href="/">Sixth form
                 </a>
-                <a href="/">Russian curriculum
-                </a>
-                <a href="/">Afterschool curriculum</a>
+              
+             
+               
               </div>
             </div>
             <div className='flex flex-col gap-5'>

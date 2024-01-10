@@ -8,6 +8,8 @@ import Footer from "../pages/footer"
 import Mission from "../pages/mission"
 import Booknow from "../pages/booknow"
 import Values from "../pages/values"
+import Facility from "./facility"
+import Translator from './hindi.js';
 import AboutSummery from '../pages/aboutsummery';
 const home = () => {
   const images = ['heroimg2'];
@@ -20,6 +22,7 @@ const home = () => {
      <Mission/>
      <Values/>
      <Booknow/>
+     <Facility/>
      <Footer/>  
      {/* <Carousel images={images}  /> */}
     </div>

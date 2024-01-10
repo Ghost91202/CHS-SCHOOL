@@ -1,10 +1,11 @@
 import React from 'react';
 import Drawer from "./Drawer";
-import Logo from "../assets/logo.png";
 
+import Logo from "../assets/logo.png";
 const Navbar = () => {
   return (
     <div>
+  
       <div className='flex md:fixed sticky z-50 w-screen justify-between h-16 bg-gray-100'>
         <Drawer className="flex z-50" />
         <div>
@@ -20,6 +21,7 @@ const Navbar = () => {
           <a href="/">Contact</a>
         </div>
         <div className='flex mr-4 justify-center gap-3 mt-2'>
+          <a href="/login" className='bg-red-600 md:h-10 md:p-2 h-8 p-1  text-white font-semibold'>Log in</a>
           <a href="/register" className='bg-red-600 md:h-10 md:p-2 h-8 p-1  text-white font-semibold'>Apply Now</a>
           <a href="" className='md:p-2 p-1 underline-offset-2 hover:underline hover:text-red-600'> ENG</a>
         </div>

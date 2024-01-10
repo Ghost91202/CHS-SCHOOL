@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+h1{
+    font-size: clamp(1.5625rem, -1.1719rem + 8.75vw, 3.75rem);
+    white-space: nowrap;
+    color: white;
+}
+
+#home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#home > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}  
+
+#home::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(transparent, rgb(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+#home > .container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#home > .container .box{
+    position: relative;
+    background: rgb(209, 0, 0);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#home > .container .box_one{ 
+    grid-area: 1 / 1 / 7 / 4; 
+    width: 0%;
+}
+
+#home > .container .box_two{ 
+    grid-area: 5 / 4 / 7 / 7; 
+    width: 0%;
+}
+
+#home > .container .box_three{ 
+    grid-area: 1 / 6 / 5 / 7; 
+    height: 0%;
+    align-self: self-end;
+}
+
+#home > .container .box_four{ 
+    grid-area: 1 / 4 / 3 / 6; 
+    width: 0%;  
+    justify-self: end;
+}
+
+#home > .container .box_five{ 
+    grid-area: 3 / 4 / 5 / 5; 
+    height: 0%;
+}
+
+#home > .container .box_six{ 
+    grid-area: 4 / 5 / 5 / 6; 
+    width: 0%;
+}
+
+
+@media(max-width: 500px){
+    #home > .container{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    #home > .container .box_one{ 
+        grid-area: 1 / 1 / 4 / 7; 
+        width: 0%;
+    }
+    
+    #home > .container .box_two{ 
+        grid-area: 4 / 4 / 9 / 5; 
+        width: 0%;
+        justify-self: end;
+    }
+    
+    #home > .container .box_three{ 
+        grid-area: 7 / 1 / 9 / 4; 
+        height: 0%;
+        align-self: self-end;
+    }
+    
+    #home > .container .box_four{ 
+        grid-area: 4 / 1 / 7 / 3;
+        width: 0%;  
+        justify-self: start;
+    }
+    
+    #home > .container .box_five{ 
+        grid-area: 4 / 3 / 5 / 4;
+        height: 0%;
+    }
+    
+    #home > .container .box_six{ 
+        grid-area: 5 / 3 / 6 / 4;
+        width: 0%;
+    }
+}

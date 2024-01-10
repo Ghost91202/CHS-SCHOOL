@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaHome } from "react-icons/fa";
 import Navbar from "./navbar"
-import AboutPage from "../assets/DSC_0418.JPG"
+import AboutPage from "../assets/polution.jfif"
 import AboutPageimg from "../assets/jonas-jacobsson-2xaF4TbjXT0-unsplash.jpg"
 import Footer from "../pages/footer"
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -69,19 +69,21 @@ const aboutpage = () => {
             </div>
             <h1 className='text-7xl '>About </h1>
           </div>
-          <div className=' h-auto w-screen bg-stone-100 md:pb-20 pt-20 md:pt-32'>
+          <div className=' h-auto w-screen bg-stone-100 md:pb-10 pt-20 md:pt-32'>
             <div className='flex flex-col md:flex-row   md:h-full bg-white  md:ml-60 '>
-              <img src={AboutPage} alt="chs education center image" className='md:-ml-52  md:h-3/4 p-10 md:w-1/2 -mt-20 mix-blend-darken' />
+              <img src={AboutPage} alt="chs education center image" className='md:-ml-52  md:h-3/4 p-10 md:w-1/2 -mt-20 ' />
 
               <div className='flex flex-col md:mt-20 ml-12'>
                 <h1 className='text-3xl font-bold'>C.H.S. Education Centre</h1>
                 <p className='text-lg md:mr-36 mr-8 text-justify md:mb-0 mb-10 mt-8'>Established on April 9, 2015, CHS Education Centre was founded with the mission of delivering high-quality education to students. The institution is affiliated with CBSE and operates as a co-educational English medium school in Kanpur. CHS is committed to providing value-based education that fosters the holistic development of each student's personality.</p>
 
-                <h1 className='text-9xl text-stone-100 md:mt-80 md:ml-60 md:mt-24  mt-10 hidden md:flex  opacity-50'>About </h1>
+                <h1 className='text-9xl text-stone-100  md:ml-60 md:mt-24  mt-10 hidden md:flex  opacity-50'>About </h1>
               </div>
 
             </div>
-            <div className='flex relative'><img src={AboutPageimg} alt="chs school" className=" max-h-auto md:w-screen h-96 md:h-screen object-cover" />
+            <div className='flex relative '>
+              <img src={AboutPageimg} alt="chs school" className="  max-h-auto md:w-screen h-96 md:h-screen object-cover" />
+
               <div className="absolute inset-0 h-auto bg-black opacity-60"></div>
               <div className='absolute flex md:flex-row flex-col md:gap-20 md:p-20 '>
                 <div className='flex md:ml-20 ml-5 mt-5 md:gap-10   h-screen text-white  flex-col'>

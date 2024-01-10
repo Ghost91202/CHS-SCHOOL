@@ -199,14 +199,15 @@ const ClassesPage = ({ onClose }) => {
 
 
       {/* Student Modal */}
+
+      
+
       <Modal
         isOpen={isModalOpen}
         onRequestClose={() => setModalOpen(false)}
         contentLabel="Student Modal"
-        className="w-3/4 ml-64 pl-10 drop-shadow-2xl bg-white overflow-scroll ring-transparent border-transparent shadow-xl shadow-gray-300 rounded-lg p-5 flex justify-center mt-6"
-        style={{
-          maxHeight: '80vh', // Set the maximum height for the modal content
-        }}
+        className="w-auto ml-64 pl-10 h-3/4 drop-shadow-2xl bg-white overflow-x-scroll overflow-y-scroll ring-transparent border-transparent shadow-xl shadow-gray-300 rounded-lg  flex justify-center mt-6"
+       
       >
         {currentStudents.length > 0 ? (
           <div>
@@ -276,7 +277,7 @@ const ClassesPage = ({ onClose }) => {
                           </button>
                         </div>
                       ) : (
-                        <div>
+                        <div className='w-52'>
                           <button
                             onClick={() =>
                               setStudents((prevStudents) =>

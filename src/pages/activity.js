@@ -38,7 +38,7 @@ const OurActivities = () => {
               <img
                 src={Footimg}
                 alt="Football"
-                className="cursor-pointer h-52 w-52 rounded-2xl hover:h-72   "
+                className="cursor-pointer h-52 w-52 rounded-2xl   "
                 onClick={() => handleGameImageClick('Football')}
               />
             </div>
@@ -46,7 +46,7 @@ const OurActivities = () => {
               <img
                 src={Basketimg}
                 alt="Basketball"
-                className="cursor-pointer h-52 w-72 rounded-2xl hover:w-96  "
+                className="cursor-pointer h-52 w-72 rounded-2xl  "
                 onClick={() => handleGameImageClick('Basketball')}
               />
             </div>
@@ -59,7 +59,7 @@ const OurActivities = () => {
               <img
                 src={Footimg2}
                 alt="Volleyball"
-                className="cursor-pointer h-52 w-96 -ml-20 rounded-2xl hover:w-72"
+                className="cursor-pointer h-52 w-96 -ml-20 rounded-2xl "
                 onClick={() => handleGameImageClick('Volleyball')}
               />
             </div>
@@ -67,7 +67,7 @@ const OurActivities = () => {
               <img
                 src={Image}
                 alt="imageGallery"
-                className="cursor-pointer h-52 w-52 rounded-2xl hover:w-72 "
+                className="cursor-pointer h-52 w-52 rounded-2xl  "
                 onClick={() => handleGameImageClick('imageGallery')}
               />
             </div>

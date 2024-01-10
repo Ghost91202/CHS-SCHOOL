@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Teamimg from "../assets/johnwick4-section-promo-double-home-03.jpg"
-import Teamimg2 from "../assets/images.jpeg"
-import Teamimg3 from "../assets/images3.jpeg"
+import Teamimg from "../assets/Admini1.jpeg"
+import Teamimg2 from "../assets/Admini1.jpeg"
+import Teamimg3 from "../assets/Admini1.jpeg"
 import Teamimg4 from "../assets/images4.jpeg"
 import Navbar from './navbar';
 import { FaHome } from "react-icons/fa";

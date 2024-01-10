@@ -15,15 +15,15 @@ const BookNow = () => {
 
   return (
     <div className="relative flex h-auto md:h-screen w-screen">
-      <img src={Bookimg} alt="chs school" className="w-screen md:h-screen h-96 object-cover" />
-      <div className="absolute md:h-screen h-96 inset-0 bg-black opacity-50"></div>
+      <img src={Bookimg} alt="chs school" className="w-screen md:h-3/4 h-96 object-cover" />
+      <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
 
       <div className='absolute text-white md:ml-52 ml-10  mb-5 md:mt-52 mt-20 z-3'>
         <h1 className='md:text-6xl text-3xl border-b-2 md:w-96 w-52 md:mb-14 mb-5   pb-5 border-gray-400'>School Tour</h1>
         <p className='md:text-2xl text-xl font-bold  tracking-wide'>If you would like to book a School Tour please contact us.</p>
       </div>
       <div
-        className="w-screen absolute md:p-40 p-10 md:mt-80 top-40 "
+        className="w-screen absolute md:p-40 p-10 md:mt-40 top-40 "
        
       >
         <div className="bg-white flex justify-center items-center cursor-pointer w-full mt-32 md:mt-0 md:w-full hover:bg-red-600 h-20 md:h-32"

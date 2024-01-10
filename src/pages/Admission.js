@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './navbar';
-import Admissionimg from '../assets/premium_photo-1687201986600-3303920c99b5.avif';
+import Admissionimg from '../assets/Admission1.jfif';
 import assimg from "../assets/ass.jpeg"
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import Footer from "../pages/footer"
@@ -32,12 +32,12 @@ const Admission = () => {
             <div className='flex h-screen bg-slate-100 pb-10'>
                 <div className='flex flex-col col-span-2   md:pt-5 md:pb-20 md:pl-10 pr-52 h-screen w-screen'>
                     <div className='flex flex-col  w-full md:h-1/2 md:flex-row  gap-5 md:mt-20 md:ml-20 md:mr-10 '>
-                        <div className='bg-black relative h-80 overflow-hidden w-full rounded-2xl'>
+                        <div className=' relative h-80 overflow-hidden w-full rounded-2xl'>
                             <div className='relative h-full border-2 border-dashed-2 border-white w-full'>
                                 <img src={Admissionimg} alt="" className='absolute inset-0 h-full w-full filter blur-sm' />
                                 <div className='absolute inset-0 flex flex-col items-center justify-center'>
-                                    <h1 className='text-red-600 text-2xl border-2 border-dashed-2 border-white p-2 font-bold'>CHS EDUCATION CENTER</h1>
-                                    <p className='text-white text-xl'>Admission Info..</p>
+                                    <h1 className='text-white text-3xl border-2 border-dashed-2 border-white p-2 font-bold'>CHS EDUCATION CENTER</h1>
+                                    <p className='text-white text-2xl'>Admission Info..</p>
                                 </div>
                             </div>
                         </div>
@@ -159,21 +159,21 @@ const Admission = () => {
                                     <span className='text-red-600'>E-mail: chs.edu2015@gmail.com</span>
                                     <span className=' '>Phone: +91 9580874461</span>
                                 </p>
-                                <button href="/" className='ring-1 ring-red-600 w-44 mt-8'>
+                                <button href="/fees" className='ring-1 ring-red-600 w-44 mt-8'>
                                     Tuition fees
                                 </button>
 
 
                             </div>
-                            <div className="flex relative flex-col items-center justify-center   opacity-70 w-72 h-72  left-90 border-2 border-green-600 ">
+                            <div className="flex relative flex-col items-center justify-center   opacity-70 w-72 h-72  left-90 border-8 border-green-600 ">
                                 <div className="h-10 absolute bg-slate-100 w-20 -mt-72">
                                     </div> 
-                            <h1  className='md:text-3xl '>Build future with</h1>
-                                <h1 className='md:text-6xl text-white bg-green-800 p-4 '>
+                            <h1  className='md:text-3xl font-semibold'>Build future with</h1>
+                                <h1 className='md:text-6xl text-white bg-green-600 p-4 '>
                                  CHS
                                 
                                 </h1>
-                                <span className="text-3xl  mix-blend-difference" >Education Center</span>
+                                <span className="text-3xl  mix-blend-difference font-semibold" >Education Center</span>
                                
                             </div>
 

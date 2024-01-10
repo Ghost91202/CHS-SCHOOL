@@ -16,8 +16,11 @@ import Admission from "./pages/Admission.js"
 import Intro from "./home/home.js"
 import Home2 from "./chskanpurDehat/components/home.js"
 import Pdf from "./chskanpurDehat/pages/certificate.js"
-import Gallery from "./pages/specialday.js"
-import Timing from "./pages/schooltiming.js"
+import Gallery from "./pages/gallery.js"
+import Testi from "./pages/testi.js"
+import Client from "./components/client3.js"
+import Timing from "./pages/timing.js"
+import Parent from "./pages/Forparents.js"
 import { ParallaxProvider } from "react-scroll-parallax";
 const App = () => {
   const [userRole, setUserRole] = useState(null);
@@ -27,45 +30,32 @@ const App = () => {
   };
 
   return (
-<div className=' overflow-hidden'>
-<Router>
-      <Routes>
-      
-      <Route path="/Chs" element={<Home />} />
-      <Route path="/Chs-Kanpur-Dehat" element={<Home2 />} />
-      <Route path="/" element={<Intro />} />
-      <Route path="/SchoolTiming" element={<Timing />} />
-
-   
- 
-      <Route path="/Chs-Kanpur-Dehat/certificate" element={<Pdf />} />
-      <Route path="/cbse/Gallery" element={<Gallery />} />
-
-      <Route exact path="/mb" element={<Team />} />
-        <Route path="/team/:memberId" element={<AllTeams />} />
-    
-      <Route path="/Activities" element={<Activities />} />
-      <Route path="/chs/Admission" element={<Admission />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/fees" element={<Fees />} />
-      <Route path="/Register" element={<Register />} />
-        <Route
-          path="/login"
-          element={userRole ? <Navigate to={`/${userRole}`} /> : <LoginForm onLogin={handleLogin} />}
-        />
-        <Route
-          path="/student"
-          element={userRole === 'student' ? <StudentDashboard /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/admin"
-          element={userRole === 'admin' ? <AdminDashboard /> : <Navigate to="/login" />}
+    <div className=' overflow-hidden'>
+      <Router>
+        <Routes>
+          <Route path="/Chs" element={<Home />} />
+          <Route path="/Chs-Kanpur-Dehat" element={<Home2 />} />
+          <Route path="/" element={<Intro />} />
           
-        />
-         <Route path="/admin/classes/:className"   element={userRole === 'admin' ? <ClassPage /> : <Navigate to="/login" />} />
-      </Routes>
-    </Router>
-</div>
+          <Route path="/Chs-Kanpur-Dehat/certificate" element={<Pdf />} />
+          <Route path="/client" element={<Client />} />
+          <Route path="/Parent" element={<Parent />} />
+          <Route path="/Testi" element={<Testi />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Timing" element={<Timing />} />
+          <Route exact path="/mb" element={<Team />} />
+          <Route path="/team/:memberId" element={<AllTeams />} />
+          <Route path="/Activities" element={<Activities />} />
+          <Route path="/chs/Admission" element={<Admission />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/fees" element={<Fees />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/login" element={userRole ? <Navigate to={`/${userRole}`} /> : <LoginForm onLogin={handleLogin} />} />
+          <Route path="/student" element={userRole === 'student' ? <StudentDashboard /> : <Navigate to="/login" />} />
+          <Route path="/admin" element={userRole === 'admin' ? <AdminDashboard /> : <Navigate to="/login" />} />
+          <Route path="/admin/classes/:className" element={userRole === 'admin' ? <ClassPage /> : <Navigate to="/login" />} />  </Routes>
+      </Router>
+    </div>
   );
 };
 

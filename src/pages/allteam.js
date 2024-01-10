@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Teamimg from "../assets/johnwick4-section-promo-double-home-03.jpg"
-import Teamimg2 from "../assets/images.jpeg"
+import Teamimg from "../assets/Admini1.jpeg"
+import Teamimg2 from "../assets/Admini1.jpeg"
 import Teamimg3 from "../assets/images3.jpeg"
 import Navbar from "../pages/navbar"
 import Footer from "../pages/footer"
@@ -12,12 +12,28 @@ const teamMembers = [
     { 
         id: 1,
         firstLetter:"Honourable",
-        name: 'John Wick',
+        name: 'Ch. Sukhram Singh Yadav',
         position: 'Chairman',
         image: Teamimg,
         summary:`Welcome to our exceptional school, where we encourage the motto "Learn to explore to learn." Our high-quality childcare and education are based on advanced and proven techniques. We provide an environment that nurtures your child's individuality and helps them explore the world with wonder and amazement. Our ultimate goal is to transform your child into a smart, confident, and determined leader, instilling values such as courage, strength, confidence, teamwork, and determination. From young toddlers to future leaders, we welcome your child with open arms. Join us today and let us help your child reach their full potential!`
      },
-    { id: 2,firstLetter:"Honourable", name: 'Jane Smith', position: 'Forward', image: Teamimg2 },
+    { 
+        id: 2,
+        firstLetter:"Mr.",
+        name: 'Mohit Chaudhari',
+        position: 'Director',
+        image: Teamimg,
+        summary:`Welcome to our exceptional school, where we encourage the motto "Learn to explore to learn." Our high-quality childcare and education are based on advanced and proven techniques. We provide an environment that nurtures your child's individuality and helps them explore the world with wonder and amazement. Our ultimate goal is to transform your child into a smart, confident, and determined leader, instilling values such as courage, strength, confidence, teamwork, and determination. From young toddlers to future leaders, we welcome your child with open arms. Join us today and let us help your child reach their full potential!`
+     },
+    { 
+        id: 3,
+        firstLetter:"Mrs",
+        name: 'Jyoti vij',
+        position: 'Principal',
+        image: Teamimg,
+        summary:`Welcome to our exceptional school, where we encourage the motto "Learn to explore to learn." Our high-quality childcare and education are based on advanced and proven techniques. We provide an environment that nurtures your child's individuality and helps them explore the world with wonder and amazement. Our ultimate goal is to transform your child into a smart, confident, and determined leader, instilling values such as courage, strength, confidence, teamwork, and determination. From young toddlers to future leaders, we welcome your child with open arms. Join us today and let us help your child reach their full potential!`
+     },
+    { id: 4,firstLetter:"Honourable", name: 'Jane Smith', position: 'Forward', image: Teamimg2 },
     // Add more team members as needed
 ];
 
