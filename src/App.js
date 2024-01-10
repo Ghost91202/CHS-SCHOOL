@@ -22,6 +22,8 @@ const Testi = lazy(() => import('./pages/testi.js'));
 const Client = lazy(() => import('./components/client3.js'));
 const Timing = lazy(() => import('./pages/timing.js'));
 const Parent = lazy(() => import('./pages/Forparents.js'));
+const Earlyage = lazy(() => import('./pages/earlyage.js'));
+const Primary = lazy(() => import('./pages/Primary.js'));
 
 
 
@@ -106,7 +108,27 @@ const App = () => {
             }
           />
           <Route
-            path="/Chs-Kanpur-Dehat/certificate"
+            path="/Early-Years"
+            element={
+              <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
+              <Loading/>
+            </div>}>
+                <Earlyage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/Primary"
+            element={
+              <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
+              <Loading/>
+            </div>}>
+                <Primary />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/certificate"
             element={
               <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
               <Loading/>

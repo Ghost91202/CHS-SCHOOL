@@ -45,8 +45,13 @@ const Levels = () => {
     <div className='h-auto md:h-96 w-screen'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:ml-14 md:h-96 h-full'>
         <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:ml-14 h-full'>
-          <Level title='Kindergarten' description='CHS Education center' ageRange='3-5' />
+        <a href='/early-years'>
+        <Level title='Kindergarten' description='CHS Education center' ageRange='3-5' />
+        </a>
+        <a href='/primary'>
+
         <Level title='Primary school' description='CHS Education center' ageRange='5-11' />
+        </a>
         </div>
        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:ml-14 h-full'>
        <Level title='High school' description='CHS Education center' ageRange='11-16' />

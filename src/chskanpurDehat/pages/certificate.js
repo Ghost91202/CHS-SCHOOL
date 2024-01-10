@@ -20,29 +20,32 @@ import {
 
 const App = () => {
   const pdfUrls = [
-    { url: AcademicCalendar, name: 'Academic Calendar' },
-    { url: LinkofPTA, name: 'Link of PTA' },
-    { url: LinkofThreeYearResult, name: 'Link of Three Year Result' },
-    { url: MandatoryDisclosure, name: 'Mandatory Disclosure' },
-    { url: NOC, name: 'NOC' },
-    { url: RecognitionCertificate, name: 'Recognition Certificate' },
-    { url: SMC, name: 'SMC' },
-    { url: TrustCertificate, name: 'Trust Certificate' },
-    { url: WaterHealthCertificate, name: 'Water Health Certificate' },
-    { url: FireCertificate, name: 'Fire Certificate' },
-    { url: FeeStructure, name: 'Fee Structure' },
-    { url: DEOCertificate, name: 'DEO Certificate' },
-    { url: BuildingCertificate, name: 'Building Certificate' },
-    { url: affiliationletter, name: 'Affiliation Letter' },
+    { url: AcademicCalendar, name: 'Academic Calendar', title:"Academic Calender CHS Education Center "},
+    { url: LinkofPTA, name: 'Link of PTA', title:"Academic Calender CHS Education Center "},
+    { url: LinkofThreeYearResult, name: 'Link of Three Year Result', title:"Academic Calender CHS Education Center "},
+    { url: MandatoryDisclosure, name: 'Mandatory Disclosure', title:"Academic Calender CHS Education Center "},
+    { url: NOC, name: 'NOC', title:"Academic Calender CHS Education Center "},
+    { url: RecognitionCertificate, name: 'Recognition Certificate', title:"Academic Calender CHS Education Center "},
+    { url: SMC, name: 'SMC', title:"Academic Calender CHS Education Center "},
+    { url: TrustCertificate, name: 'Trust Certificate', title:"Academic Calender CHS Education Center "},
+    { url: WaterHealthCertificate, name: 'Water Health Certificate', title:"Academic Calender CHS Education Center "},
+    { url: FireCertificate, name: 'Fire Certificate', title:"Academic Calender CHS Education Center "},
+    { url: FeeStructure, name: 'Fee Structure', title:"Academic Calender CHS Education Center "},
+    { url: DEOCertificate, name: 'DEO Certificate', title:"Academic Calender CHS Education Center "},
+    { url: BuildingCertificate, name: 'Building Certificate', title:"Academic Calender CHS Education Center "},
+    { url: affiliationletter, name: 'Affiliation Letter', title:"Academic Calender CHS Education Center "},
     // Add more PDF URLs as needed
   ];
 
   return (
-    <div classname="relative">
+    <div classname="relative ">
       <Navbar />
-      <div classname="flex mt-20">
+     
+      <div classname="flex flex-col mt-20">
+     
         <PdfDownloader pdfUrls={pdfUrls} />
-      </div>    </div>
+      </div> 
+    </div>
   );
 };
 

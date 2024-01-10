@@ -118,7 +118,7 @@ const Admission = () => {
                 <div className='flex bg-white text-red-600 flex-col md:flex-row hover:bg-red-600 col-span-2 md:row-span-2 h-20 w-3/4 justify-center items-center cursor-pointer' onMouseEnter={handleHover}
                     onMouseLeave={handleLeave}
                     onClick={handleClick}>
-                    <h1 style={textStyle} className='text-2xl flex'> Admission policy
+                    <h1 style={textStyle} className='text-2xl font-semibold flex'> Admission policy
                         <IoIosArrowRoundForward className='text-4xl md:text-4xl mt-1 font-sans' style={textStyle} />
                     </h1>
                 </div>
@@ -141,9 +141,9 @@ const Admission = () => {
                                     <span className='text-red-600'>E-mail: chs.edu2015@gmail.com</span>
                                     <span>Phone: +91 9580874461</span>
                                 </p>
-                                <button href="/" className='ring-1 ring-red-600 w-44 mt-8'>
+                                <a href="/fees" className='ring-1 ring-red-600 flex items-center justify-center w-44 mt-8'>
                                     Tuition fees
-                                </button>
+                                </a>
                             </div>
                             <div className='md:text-lg flex flex-col gap-4 '>
                                 <div className='md:text-2xl font-bold w-64 pb-10  border-b-2 border-transparent hover:border-red-600 hover:text-red-600'>
@@ -159,9 +159,9 @@ const Admission = () => {
                                     <span className='text-red-600'>E-mail: chs.edu2015@gmail.com</span>
                                     <span className=' '>Phone: +91 9580874461</span>
                                 </p>
-                                <button href="/fees" className='ring-1 ring-red-600 w-44 mt-8'>
+                                <a href="/fees" className='ring-1 ring-red-600 flex items-center justify-center w-44 mt-8'>
                                     Tuition fees
-                                </button>
+                                </a>
 
 
                             </div>
