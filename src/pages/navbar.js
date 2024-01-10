@@ -2,6 +2,7 @@ import React from 'react';
 import Drawer from "./Drawer";
 
 import Logo from "../assets/logo.png";
+
 const Navbar = () => {
   return (
     <div>
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className='flex md:fixed sticky z-50 w-screen justify-between h-16 bg-gray-100'>
         <Drawer className="flex z-50" />
         <div>
-          <a href="/">
+          <a href="/chs">
             <img src={Logo} alt="chs school" className='h-14 mt-1' />
           </a>
         </div>

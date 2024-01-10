@@ -15,14 +15,14 @@ const home = () => {
   const images = ['heroimg2'];
   return (
     <div className='h-auto overflow-x-hidden bg-stone-100'>
-     <Navbar/>
+     {/* <Navbar/>
      <Carousel  />
      <Levels/>
      <AboutSummery/>
      <Mission/>
      <Values/>
      <Booknow/>
-     <Facility/>
+     <Facility/> */}
      <Footer/>  
      {/* <Carousel images={images}  /> */}
     </div>

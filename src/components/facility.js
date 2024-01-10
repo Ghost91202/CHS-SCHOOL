@@ -6,7 +6,7 @@ import img4 from "../assets/27.jfif"
 import Logo from "../assets/logo.png"
 const facility = () => {
   return (
-    <div className=' '>
+    <div className='hidden md:flex '>
       <div className='h-auto ml-14'>
         <div className=' grid grid-flow-col grid-cols-4'>
           <div>

@@ -1,70 +1,49 @@
 import React from 'react'
-import logo from "../assets/logo.png"
+import FooterIMG from "../assets/back.webp"
+import "./Footer.css"
 const footer = () => {
     return (
-        <div className='w-screen ml-14 h-auto pb-10 md:pb-20  '>
-            <div className='flex justify-between'>
-                <div className='grid gird-flow-cols md:grid-cols-3 md:p-10'>
-                    <div className='grid grid-flow-row grid-rows-2 '>
-                        <div className='md:p-10 mt-20 md:mt-0'>
-                            <h1 className='text-2xl font-bold w-44 border-b-2 pb-5 border-red-600'>CHS</h1>
-                        </div>
-                        <div className='grid  grid-flow-row grid-rows-6 gap-2 md:-mt-5 -mt-3 md:w-full w-screen  md:ml-10'>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>About us </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Mission & Vision </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Teachers </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Licenses</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Quality and service </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Contacts </a>
-                        </div>
-                    </div>
-                    <div className='grid grid-flow-row grid-rows-2 '>
-                        <div className='md:p-10 md:mt-0 mt-10'>
-                            <h1 className='text-2xl font-bold w-44  border-b-2 md:pb-5 border-red-600'>Programs</h1>
-                        </div>
-                        <div className='grid  grid-flow-row grid-rows-6 gap-2 md:-mt-5 -mt-10 md:w-full w-screen  md:ml-10'>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>What makes us unique?
-                            </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Kindergarten</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Primary School
-                            </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>high school</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Extracurricular activities</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Contacts </a>
-                        </div>
-                    </div>
-                    <div className='grid grid-flow-row grid-rows-2 '>
-                        <div className='p-10 -ml-10 md:-ml-0'>
-                            <h1 className='text-2xl font-bold w-44 border-b-2 md:pb-5 border-red-600'>Admission</h1>
-                        </div>
-                        <div className='grid  grid-flow-row grid-rows-6 gap-2 md:-mt-5 -mt-10 md:w-full w-screen  md:ml-10'>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Admission Process</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Cost of education </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>School Admission </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Apply now</a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>CHS World </a>
-                            <a href="/" className='w-full hover:text-red-600 hover:underline'>Working at CHS </a>
-                        </div>
-                    </div>
-                </div>
-                <div className=' flex flex-col gap-10 w-96 h-auto'>
-                    <div className=' bg-white  w-96 h-44'>
+        <div className="relative flex h-auto md:h-screen w-screen">
+            <img src={FooterIMG} alt="chs school" className="w-screen md:h-3/4 h-96 object-cover" />
+            <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
 
-                        <img src={logo} alt="" className='flex  h-24 mt-10 ml-20' />
+            <div className='absolute w-screen justify-center mt-10 items-center   text-white  z-3'>
+               <div className='  flex justify-center gap-8'>
+               <a href=''>
+                    <div class="w-32 h-32 rounded-full bg-red-700 hover:bg-red-600 flex items-center justify-center">
+                        <p class="text-white">Register Now</p>
                     </div>
-                    <div className='h-10 w-screen p-5 flex '>
-                        <h1 className='w-full hover:text-red-600 hover:underline cursor-pointer hover:text-xl'>Developed by RBMS</h1>
+                </a>
+                <a href=''>
+                    <div class="w-32 h-32 rounded-full bg-red-700 hover:bg-red-600 flex items-center justify-center">
+                        <p class="text-white">Visit Now</p>
                     </div>
-                    <div>
-                        <h1 className='text-3xl text-green-600  '>Address</h1>
-                        <h1 className='w-72 mt-5 text-lg font-medium'>
-                            S-2 Tatya Topey Nagar, Kanpur-208022
-                        </h1>
+                </a>
+                <a href=''>
+                    <div class="w-32 h-32 rounded-full bg-red-700 hover:bg-red-600 flex items-center justify-center">
+                        <p class="text-white">Apply Now</p>
                     </div>
-                </div>
-
+                </a>
+                <a href=''>
+                    <div class="w-32 h-32 rounded-full bg-red-700 hover:bg-red-600 flex items-center justify-center">
+                        <p class="text-white">Give Now</p>
+                    </div>
+                </a>
+               </div>
+                <p className='md:text-2xl text-xl font-bold  tracking-wide'>If you would like to book a School Tour please contact us.</p>
             </div>
+            <div
+                className="w-screen absolute md:p-40 p-10 md:mt-40 top-40 "
 
+            >
+                <div className="bg-white flex justify-center items-center cursor-pointer w-full mt-32 md:mt-0 md:w-full hover:bg-red-600 h-20 md:h-32"
+
+                >
+                    <h1 className="text-red-700 flex   text-3xl mt-1" >
+                        Book A Tour Now
+                    </h1>
+                </div>
+            </div>
         </div>
     )
 }

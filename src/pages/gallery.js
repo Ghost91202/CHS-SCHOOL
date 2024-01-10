@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useref } from 'react';
 import Navbar from './navbar';
 import { FaHome } from 'react-icons/fa';
-import Anim from "../assets/gallery21.jpg";
-import Slide2 from "../assets/gallery21.jpg"
+// import Anim from "../assets/gallery21.jpg";
+// import Slide2 from "../assets/gallery21.jpg"
 import Gimg from "../assets/gallery10.jpg"
 import "./gallery.css"
 const Gallery = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Teamimg from "../assets/Admini1.jpeg"
 import Teamimg2 from "../assets/Admini1.jpeg"
-import Teamimg3 from "../assets/images3.jpeg"
+// import Teamimg3 from "../assets/images3.jpeg"
 import Navbar from "../pages/navbar"
 import Footer from "../pages/footer"
 import { FaHome } from "react-icons/fa";

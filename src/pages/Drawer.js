@@ -74,10 +74,12 @@ const DrawerComponent = () => {
         <IoAppsOutline onClick={toggleDrawer} className='text-4xl  cursor-pointer ' />
         <div className='md:flex text-black hidden -rotate-90 gap-10 mb-20'>
 
+          <a href="https://www.youtube.com/channel/UC9zRgiuIibfuaG2cgsSq_uQ">
           <div className='flex hover:text-red-500 underline-offset-2 hover:underline hover:text-red-600 cursor-pointer gap-1'>
             <CiYoutube className='flex mt-2 ' />
             youtube
           </div>
+          </a>
           <div className='hover:text-red-500 underline-offset-2 hover:underline hover:text-red-600'>
             telegram
           </div>

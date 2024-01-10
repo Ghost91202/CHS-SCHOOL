@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'flowbite-react';
-import cyber1 from "../assets/DSC_0761.JPG"
-import cyber2 from "../assets/DSC_0418.JPG"
-import cyber3 from "../assets/PRE-PRIMARY ACT - 5 (1).jpg"
+import cyber1 from "../assets/26212813_efhk_d386_220311.jpg"
+import cyber2 from "../assets/awards.jpg"
+import cyber3 from "../assets/72351f9d3ad5e1074662490290ef160c.jpg"
 import cyber4 from "../assets/PRE- PRIMARY ACT 7.jpg"
 
 import "./ImageCarousel.css"
