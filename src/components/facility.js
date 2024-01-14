@@ -13,13 +13,13 @@ const facility = () => {
             <img src={IMG1} className='h-full w-full'></img>
           </div>
           <div className='bg-red-600 text-white'>
-           <div className=' z-1 p-8 w-96 justify-center text-balance text-center'>
-           <h1 className='text-4xl underline'>
+           <div className=' z-1 p-8 w-auto justify-center text-balance text-center'>
+           <h1 className='md:text-4xl sm:text-2xl lg:text-3xl underline'>
            Code of Honor
             </h1>
             <p className='mt-8 text-md font-semibold tracking-wider'>
-            One of a person’s greatest attributes and most cherished traits is honor. An honor system is based on the premise that a person upholds the highest standard in all they do. Honor and integrity are related to our school’s key characteristics. Without honor, students cannot achieve their maximum potential. <br/>
-
+            Honor is a valuable trait. It upholds the highest standard in everything we do.
+            Our school's key characteristics are based on honor and integrity. It is essential for students to achieve their full potential.<br/>
             </p>
            </div>
           </div>
@@ -27,34 +27,31 @@ const facility = () => {
             <img src={img2} className='h-full w-full'></img>
           </div>
           <div className='bg-red-600 text-white'>
-           <div className=' z-1 p-8 w-96 justify-center text-balance text-center'>
-           <h1 className='text-4xl underline'>
+           <div className=' z-1 p-8 w-auto justify-center text-balance text-center'>
+           <h1 className='md:text-4xl sm:text-2xl lg:text-3xl underline'>
            Dress Code
             </h1>
             <p className='mt-8 text-md font-semibold tracking-wider'>
-            All TIMES2 STEM Academy students MUST wear their appropriate uniform, including when in after-school programs. Students will not be admitted to class without the correct uniform. K-6 students and parents should follow “the day of the week” calendar to coordinate uniform changes for PE days. All uniform clothing and footwear must be purchased from an authorized retailer* and may only be the designated styles and colors approved.
-            </p>
+            CHS education centre students must wear their uniform, including after-school programs. Correct uniforms are required for class. Check calendar for PE uniform changes. Buy uniform from authorized retailer*. Only designated styles and colors allowed.<br/>            </p>
            </div>
           </div>
          
         </div>
         <div className=' grid grid-flow-col grid-cols-4'>
         <div className='bg-red-600 text-white'>
-           <div className=' z-1 p-8 w-96 justify-center text-balance text-center'>
-           <h1 className='text-4xl underline'>
+           <div className=' z-1 p-8 w-auto justify-center text-balance text-center'>
+           <h1 className='md:text-4xl sm:text-2xl lg:text-3xl underline'>
            Code of Discipline            </h1>
             <p className='mt-8 text-md font-semibold tracking-wider'>
-            Responsibility Centered Discipline, the philosophy of Times2 behavior management
-Discipline Protocol: Discipline should be a responsibility based, progressive, learning process; It should carry with it the goal of intervening in and prevention of continuous episodes of disruptive and/or hurtful behaviors that interfere with a safe, comfortable, and welcoming learning environment.
-            </p>
+            CHS Education Centre follows Responsibility Centered Discipline for behavior management. Discipline is a progressive, responsibility-based learning process that intervenes and prevents disruptive or hurtful behaviors that affect a safe, comfortable, and welcoming learning environment.<br/>   </p>
            </div>
           </div>
           <div>
             <img src={img3} className='h-full w-full'></img>
           </div>
           <div className='bg-red-600 text-white'>
-           <div className=' z-1 p-8 w-96 justify-center text-balance text-center'>
-           <h1 className='text-4xl underline'>
+           <div className=' z-1 p-8 w-auto justify-center text-balance text-center'>
+           <h1 className='md:text-4xl sm:text-2xl lg:text-3xl underline'>
            Communication Protocols            </h1>
             <p className='mt-8 text-md font-semibold tracking-wider'>
             CHS education center, we believe that communication is extremely important. Here you will find information on the protocol for communicating and escalating a concern if you are a parent or teacher.

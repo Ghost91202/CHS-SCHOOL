@@ -81,23 +81,24 @@ const aboutpage = () => {
               </div>
 
             </div>
-            <div className='flex relative '>
+            <div className='flex w-screen justify-between relative '>
               <img src={AboutPageimg} alt="chs school" className="  max-h-auto md:w-screen h-96 md:h-screen object-cover" />
-
-              <div className="absolute inset-0 h-auto bg-black opacity-60"></div>
+              <div className="absolute inset-0 h-auto  bg-black opacity-60"></div>
               <div className='absolute flex md:flex-row flex-col md:gap-20 md:p-20 '>
                 <div className='flex md:ml-20 ml-5 mt-5 md:gap-10   h-screen text-white  flex-col'>
-                  <h1 className='md:text-8xl text-5xl  underline'>History</h1>
-                  <p className='text-xl w-96 md:w-full text-justify mt-4 md:mt-8'>Established on April 9, 2015, CHS Education Centre was founded with the mission of delivering high-quality education to students. The institution is affiliated with CBSE and operates as a co-educational English medium school in Kanpur. CHS is committed to providing value-based education that fosters the holistic development of each student's personality.</p>
+                  <h1 className='md:text-6xl lg:text-6xl sm:text-5xl text-5xl  underline'>History</h1>
+                  <p className='text-xl w-96 md:w-full text-justify mt-4 md:mt-8'>
+                  Founded on April 9, 2015, the CHS Education Centre is dedicated to delivering superior education to students. Affiliated with CBSE, the institution operates as a co-educational English medium school in Kanpur. CHS is unwavering in its commitment to offer value-based education, nurturing the holistic development of each student's personality.                  </p>
 
                 </div>
-                <div className='flex md:ml-20 hidden md:flex md:mt-10 gap-10  h-screen text-white  flex-col'>
-                    <h1 className='text-7xl   underline'>OUR MOTTO</h1>
-                    <p className='text-xl text-justify mt-8'>"Our school's motto: Discipline, Patience, Punctuality & Responsibility. We believe in cultivating self-control, perseverance, and accountability. These values prepare students for academic and personal success. We strive to create a culture that empowers responsible and successful citizens of the world."</p>
+                <div className='flex   md:flex md:mt-5 gap-10  h-screen text-white  flex-col'>
+                    <h1 className='md:text-6xl lg:text-6xl sm:text-5xl text-5xl   underline'>Our Motto</h1>
+                    <p className='text-xl text-justify mt-4'>
+                    "Our motto, Discipline, Patience, Punctuality, and Responsibility, encapsulates our core values. We instill self-control, perseverance, and accountability for academic and personal success. Our aim is responsible and successful global citizens."                    
+                    </p>
                 </div>
 
               </div>
-
             </div>
 
           </div>

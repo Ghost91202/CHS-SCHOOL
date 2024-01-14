@@ -16,50 +16,25 @@ function Component() {
 
         <div>
           <img src={cyber4} alt="..." className='md:h-full h-96 w-screen flex relative' />
-          <div className='absolute text-white font-extrabold z-10 md:top-40 top-24 ml-5 md:ml-40  md:w-2/4 '>
-            <p className='md:text-2xl text-lg tracking-wider tracking-wider '> CHS Education centre
-            </p>
-            <h1 className='text-white mix-blend-difference text-2xl md:text-7xl md:mb-7 mb-3  w-3/4 md:w-full'>
-              OUR SCHOOL <strong className='text-yellow-300 mix-blend-difference underlines1'>
-                COMMUNITY</strong> IS FORMED  FROM <strong className='text-green-300 mix-blend-difference'>PUPILS</strong>, <strong className=" text-purple-800 mix-blend-difference">PARENTS</strong> AND <strong className=' text-pink-600'>STAFF</strong> 1
-            </h1>
+          <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
 
-          </div>
         </div>
         <div>
-          <img src={cyber2} alt="..." className='md:h-full h-96 md:-mt-32 w-screen flex relative' />
-          <div className='absolute text-white font-extrabold z-10 md:top-40 top-24 ml-5 md:ml-40  md:w-2/4 '>
-            <p className='md:text-2xl text-lg tracking-wider tracking-wider'>CHS Education centre </p>
-            <h1 className='text-white text-2xl md:text-7xl md:mb-7 mb-3 mix-blend-normal	mix-blend-color w-3/4 md:w-ful'>
-              OUR SCHOOL <strong className='text-yellow-300'>
-                COMMUNITY</strong> IS FORMED  FROM <strong className='text-green-300'>PUPILS</strong>, <strong className=" text-purple-800">PARENTS</strong> AND <strong className=' text-pink-600'>STAFF</strong> 2
-            </h1>
-
-          </div>
+          <img src={cyber2} alt="..." className='md:h-full h-96 w-screen flex relative'/>
+          <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
+         
         </div>
         <div>
           <img src={cyber3} alt="..." className='md:h-full h-96 w-screen flex relative' />
-          <div className='absolute text-white font-extrabold z-10 md:top-40 top-24 ml-5 md:ml-40  md:w-2/4'>
-            <p className='md:text-2xl text-lg tracking-wider tracking-wider'>CHS Education centre </p>
-            <h1 className='text-white text-2xl md:text-7xl md:mb-7 mb-3 mix-blend-normal	mix-blend-color w-3/4 md:w-full'>
-              OUR SCHOOL <strong className='text-yellow-300'>
-                COMMUNITY</strong> IS FORMED  FROM <strong className='text-green-300'>PUPILS</strong>, <strong className=" text-purple-800">PARENTS</strong> AND <strong className=' text-pink-600'>STAFF</strong> 3
-            </h1>
-
-          </div>
+          <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
+          
 
         </div>
         <div>
 
-          <img src={cyber1} alt="..." className='md:h-full h-96 w-screen flex relative md:-mt-72' />
-          <div className='absolute text-white font-extrabold z-10 md:top-40 top-24 ml-5 md:ml-40  md:w-2/4 '>
-            <p className='md:text-2xl text-lg tracking-wider tracking-wider'>CHS Education centre </p>
-            <h1 className='text-white text-2xl md:text-7xl md:mb-7 mb-3 mix-blend-normal	mix-blend-color w-3/4 md:w-full'>
-              OUR SCHOOL <strong className='text-yellow-300'>
-                COMMUNITY</strong> IS FORMED  FROM <strong className='text-green-300'>PUPILS</strong>, <strong className=" text-purple-800">PARENTS</strong> AND <strong className=' text-pink-600'>STAFF</strong> 4
-            </h1>
-
-          </div>
+          <img src={cyber1} alt="..." className='md:h-full h-96 w-screen flex relative ' />
+          <div className="absolute md:h-3/4 h-96 inset-0 bg-black opacity-50"></div>
+         
         </div>
         {/* <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." /> */}
       </Carousel>
@@ -67,6 +42,4 @@ function Component() {
 
     </div>
   );
-}
-
-export default Component;
+}export default Component;

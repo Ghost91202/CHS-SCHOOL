@@ -58,8 +58,8 @@ const AboutSummary = () => {
   // };
   return (
     <div className='relative bg-stone-100'>
-      <div className='flex flex-col lg:flex-row justify-between bg-white  md:pb-40 rounded-3xl p-10  mx-4 md:ml-24 lg:ml-20 md:mb-10 mt-4'>
-        <div className='flex flex-col gap-4 w-full lg:w-1/2'>
+      <div className='flex flex-col lg:flex-row justify-between bg-white  md:pb-24 rounded-3xl p-10  mx-4 md:ml-24 lg:ml-20 md:mb-10 mt-4'>
+        <div className='flex flex-col gap-4 w-auto xl:w-auto sm:w-auto lg:w-1/2'>
           <h1 className='text-2xl lg:text-4xl'>Welcome TO C.H.S. Education Centre</h1>
           <div className='mt-4'>
             <p className='text-lg lg:text-2xl opacity-85'>Affiliation No : 2132820</p>
@@ -69,41 +69,13 @@ const AboutSummary = () => {
               education to develop a child's personality. We believe-
             </p>
           </div>
-          <div className='mt-4 ml-5 lg:ml-10 space-y-2'>
-            <li>A good teacher can inspire hope, ignite the imagination, and instill a love of learning.</li>
-            <li>A teacher is a compass that activates the magnets of curiosity, knowledge, and wisdom in the pupils.</li>
-            <li>There are no secrets to success. It is the result of preparation, hard work, and learning from failure.</li>
-          </div>
+          
         </div>
         <img src={Aboutimg} alt=" chs school kanpur" className='hidden lg:block rounded-2xl w-full md:w-1/2 lg:w-1/3 ml-0 md:ml-32 lg:ml-0 mt-4 lg:mt-0' />
       </div>
-     <div className='mt-10 items-center w-screen justify-center flex lg:hidden sm:hidden md:flex xl:flex relative'>
-     <img src={Aboutimg2} alt="" className='h-24 lg:h-32  mix-blend-darken    -mt-8' />
-
-     <div className='text-3xl md:text-5xl    xl:text-9xl   2xl:text-9xl lg:text-9xl  flex items-center      text-green-700 md:text-white hover:text-green-700 hover:opacity-100 opacity-70 border-b-2   hover:border-orange-300 cursor-pointer'>
-        <span className="items-center flex">
-
-        Back to School
-        </span>
-      </div>
-      <img src={Aboutimg2} alt="" className='h-24 lg:h-32  mix-blend-darken left-3/4 lg:left-3/4 ml-0  -mt-8' />
-      </div>{/* <div
-        ref={videoRef}
-        className='relative overflow-hidden rounded-lg mx-auto my-6 bg-stone-100  md:my-12 lg:my-24 w-full h-72 lg:h-auto'
-      >
-        <div className='overflow-hidden rounded-lg  w-full h-full'>
-          <video autoPlay muted={isMuted} loop className='w-full h-full object-cover'>
-            <source src={GsapVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <button
-          onClick={handleToggleMute}
-          className='text-3xl absolute bottom-4 md:pl-20 left-4 lg:left-6 text-white  hover:text-green-700 cursor-pointer'
-        >
-          {isMuted ? <IoMdVolumeOff /> : <IoVolumeHigh />}
-        </button>
-      </div> */}
+     
+      
+      
     </div>
   );
 };

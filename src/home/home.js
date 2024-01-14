@@ -13,14 +13,14 @@ const Home = () => {
             </div>
             <div className='flex relative z-10 w-screen h-screen text-white text-center'>
                 <div className='bg-black flex items-center col-span-3 flex-col w-screen h-screen bg-opacity-60 p-8 rounded-md'>
-                    <div className='flex items-center justify-center flex-col gap-4 md:mt-32 md:mt-44 ld:mt-44 mt-44'>
-                        <img src={logo} alt="" className='flex md:w-96 items-center ld:w-52 w-60' />
+                    <div className='flex items-center justify-center flex-col gap-4 sm:mt-16  md:mt-44 lg:mt-24 mt-44'>
+                        <img src={logo} alt="" className='flex md:w-96 sm:w-72 items-center lg:w-60 w-60' />
                         <div className='flex flex-col gap-4 items-center'>
 
-                            <div className="animated-title w-full   sm:mt-20 mt-20 gap-10 text-white ">
+                            <div className="animated-title w-full xl:mt-20  sm:mt-16 md:mt-16 lg:mt-16 gap-10 text-white ">
                                 <div className="text-top flex justify-center items-center">
                                     <div>
-                                        <span className='md:text-6xl text-4xl md:ml-8 ld:ml-8 '>CHS Education Center</span>
+                                        <span className='md:text-6xl lg:text-5xl xl:text-5xl sm:text-5xl md:ml-8 lg:ml-8 '>CHS Education Center</span>
 
                                     </div>
                                 </div>
