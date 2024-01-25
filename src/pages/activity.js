@@ -1,96 +1,117 @@
-import React, { useState } from 'react';
-import GameGallery from './GameGallery.js';
-import Footimg from "../assets/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg";
-import Footimg2 from "../assets/31ca36b5-3184-4ade-a667-ad102b59623b.jpg";
-import Basketimg from "../assets/3.jfif";
-import Image from "../assets/download.jpeg"
-import Navbar from "../pages/navbar.js";
+import React, { useState, useEffect } from 'react';
+import { FaHome } from 'react-icons/fa';
+import Navbar from '../pages/navbar';
+import Acti from '../assets/Acti.jpg';
+import Reactimg from '../assets/27.jfif';
+import Nextjs from '../assets/Admission.jpg';
+import './activities.css';
 
-// Image data for the gallery
-const imageGalleryData = {
-  Football: [Footimg, Footimg2],
-  Basketball: [Basketimg],
-  Volleyball: [Footimg2],
-  imageGallery: [Image]
-  // Add more games and images as needed
-};
+const Gallery = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [zoomedIndex, setZoomedIndex] = useState(null);
 
-const OurActivities = () => {
-  const [selectedGame, setSelectedGame] = useState(null);
-
-  const handleGameImageClick = (gameName) => {
-    setSelectedGame(gameName);
+  const filterSelection = (category) => {
+    setSelectedCategory(category);
+    setZoomedIndex(null); // Reset zoomedIndex when changing categories
   };
 
-  const resetGallery = () => {
-    setSelectedGame(null);
+  const handleImageClick = (index) => {
+    setZoomedIndex(index);
+    setTimeout(() => {
+      setZoomedIndex(null); // Reset zoomedIndex after a delay
+    }, 5000); // Adjust the delay time (in milliseconds) as needed
   };
+
+  const imgData = [
+    { url: Reactimg, category: 'Holi', title: 'React.js' },
+    { url: Nextjs, category: 'Holi', title: 'Next.js' },
+    { url: 'https://i.postimg.cc/C570B6Hn/adi.jpg', category: 'Holi' },
+    { url: 'https://i.postimg.cc/9XJs9TH9/hub-1.jpg', category: 'New Year' },
+    { url: 'https://i.postimg.cc/T1g5jvYw/ro.jpg', category: 'New Year' },
+    { url: 'https://i.postimg.cc/50ZFF2JT/pp7.jpg', category: 'New Year' },
+    // Add more image data entries with different categories
+  ];
+
 
   return (
-    <div className="relative">
+    <div className='relative w-screen overflow-hidden h-auto'>
       <Navbar />
-      <div className="flex flex-col justify-center our-activities ">
-        <h2 className="text-3xl font-bold ml-32 mt-20 mb-4">Our Activities</h2>
-        <div className="flex justify-center md:h-screen w-screen gap-2 space-x-4 mt-34 mb-4">
-          <div className="flex flex-col h-96  gap-2 space-x-4 mt-32 mb-4">
-            <div className='h-auto bg-white'>
-
-              <img
-                src={Footimg}
-                alt="Football"
-                className="cursor-pointer h-52 w-52 rounded-2xl   "
-                onClick={() => handleGameImageClick('Football')}
-              />
-            </div>
-            <div>
-              <img
-                src={Basketimg}
-                alt="Basketball"
-                className="cursor-pointer h-52 w-72 rounded-2xl  "
-                onClick={() => handleGameImageClick('Basketball')}
-              />
-            </div>
-            <div>
-            </div>
-
+      <div className='flex flex-col ml-10 md:ml-40 mt-10 md:mt-20'>
+        <div className='flex flex-col gap-5'>
+          <div className='flex gap-1'>
+            <FaHome className='m-1' />
+            <span>|</span>
+            <div> Admission</div>
+            <span>|</span>
+            <div> OUR Activities</div>
           </div>
-          <div className="flex flex-col gap-2 space-x-4 mt-32 mb-4">
-            <div>
-              <img
-                src={Footimg2}
-                alt="Volleyball"
-                className="cursor-pointer h-52 w-96 -ml-20 rounded-2xl "
-                onClick={() => handleGameImageClick('Volleyball')}
-              />
-            </div>
-            <div>
-              <img
-                src={Image}
-                alt="imageGallery"
-                className="cursor-pointer h-52 w-52 rounded-2xl  "
-                onClick={() => handleGameImageClick('imageGallery')}
-              />
-            </div>
-          </div>
-
-          {/* Add more game images as needed */}
-          {/* ... */}
+          <h1 className='md:text-7xl text-3xl'>Activities</h1>
         </div>
-        {selectedGame && (
-          <>
-            <h3 className="text-2xl font-bold mb-2">{`${selectedGame} Events`}</h3>
-            <GameGallery images={imageGalleryData[selectedGame]} />
-            <button
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full mt-4"
-              onClick={resetGallery}
-            >
-              Back to Games
-            </button>
-          </>
-        )}
+      </div>
+      <div className='w-screen overflow-hidden relative flex flex-col top-20 gap-10 items-center '>
+        <div className='flex text-center gap-5 text-black p-8 md:p-20 mb-10 font-semibold justify-center items-center flex-col'>
+          <img src={Acti} alt='' className='absolute -z-10 h-72 md:h-96 w-screen object-cover' />
+          <h1 className='text-xl md:text-2xl lg:text-3xl text-white font-bold'>BUILD FUTURE WITH</h1>
+          <div className='bg-white p-2 md:p-5 text-balance flex gap-2 md:gap-5 justify-center text-4xl md:text-7xl'>
+            CHS <span className='text-red-600'>Education</span> Centre
+          </div>
+          <div className='w-3/4 md:w-full justify-center text-center flex items-center'>
+            {/* Add any additional content or components here */}
+          </div>
+        </div>
+        <div className='flex flex-wrap gap-2 sm:gap-4 md:gap-6 lg:gap-8'>
+          <div
+            onClick={() => filterSelection('all')}
+            className='cursor-pointer rounded-full bg-gray-300 px-4 py-2 text-md sm:text-lg md:text-xl lg:text-2xl'
+          >
+            Show All
+          </div>
+          <div
+            onClick={() => filterSelection('Holi')}
+            className='cursor-pointer rounded-full bg-gray-300 px-4 py-2 text-md sm:text-lg md:text-xl lg:text-2xl'
+          >
+            Holi
+          </div>
+          <div
+            onClick={() => filterSelection('New Year')}
+            className='cursor-pointer rounded-full bg-gray-300 px-4 py-2 text-md sm:text-lg md:text-xl lg:text-2xl'
+          >
+            New Year
+          </div>
+          <div
+            onClick={() => filterSelection('Back-End')}
+            className='cursor-pointer rounded-full bg-gray-300 px-4 py-2 text-md sm:text-lg md:text-xl lg:text-2xl'
+          >
+            Back-End
+          </div>
+          <div
+            onClick={() => filterSelection('CMS')}
+            className='cursor-pointer rounded-full bg-gray-300 px-4 py-2 text-md sm:text-lg md:text-xl lg:text-2xl'>
+            CMS
+          </div>
+        </div>
+         <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-10 xl:p-20 gap-4'>
+        {imgData.map((img, index) => (
+          <div
+            key={index}
+            className={`imgDiv ${selectedCategory === 'all' || img.category === selectedCategory ? 'show' : ''} ${
+              zoomedIndex === index ? 'zoomed' : ''
+            }`}
+            onClick={() => handleImageClick(index)}
+          >
+            <img
+              src={img.url}
+              alt='CHS EDUCATION CENTER'
+              className='w-full h-full object-cover border border-gray-200 rounded-md'
+            />
+            {/* <p>{img.title}</p> */}
+          </div>
+        ))}
+      </div>
+
       </div>
     </div>
   );
 };
 
-export default OurActivities;
+export default Gallery;

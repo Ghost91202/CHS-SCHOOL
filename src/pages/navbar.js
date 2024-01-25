@@ -12,9 +12,9 @@ const Navbar = () => {
       <div className='flex md:fixed sticky z-50 w-screen justify-between h-16 bg-gray-100'>
         <Drawer className="flex z-50 bg-white" />
         <div>
-          <a href="/chs">
+          <Link to="/chs">
             <img src={Logo} alt="chs school" className='h-14 mt-1' />
-          </a>
+          </Link>
         </div>
         <div className='mt-4 text-md  gap-12 hidden justify-center md:flex'>
            <Link to="/About" className='w-auto'>About</Link>
