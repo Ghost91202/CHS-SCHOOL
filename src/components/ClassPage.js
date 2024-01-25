@@ -200,14 +200,14 @@ const ClassesPage = ({ onClose }) => {
 
       {/* Student Modal */}
 
-      
+
 
       <Modal
         isOpen={isModalOpen}
         onRequestClose={() => setModalOpen(false)}
         contentLabel="Student Modal"
         className="w-auto ml-64 pl-10 h-3/4 drop-shadow-2xl bg-white overflow-x-scroll overflow-y-scroll ring-transparent border-transparent shadow-xl shadow-gray-300 rounded-lg  flex justify-center mt-6"
-       
+
       >
         {currentStudents.length > 0 ? (
           <div>
@@ -249,7 +249,7 @@ const ClassesPage = ({ onClose }) => {
                     </td>
                     <td className="px-4 py-1">
                       {student.isEditable ? (
-                        <input type="text" value={formData.number} onChange={(e) => setFormData({ ...formData, number: e.target.value })} className="input-field 
+                        <input type="text" value={formData.number} onChange={(e) => setFormData({ ...formData, number: e.target.value })} className="input-field
                         " />
                       ) : (
                         student.number

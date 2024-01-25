@@ -1,7 +1,9 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
-import Loading from "./pages/loading.js"
+import Loading from "./pages/loading.js" // Import your Modal component
+import Shuffle from './components/Shuffle.js';
+import Contact from './pages/Contact.js';
 const StudentDashboard = lazy(() => import('./components/StudentDashboard.js'));
 const AdminDashboard = lazy(() => import('./components/AdminDashboard.js'));
 const ClassPage = lazy(() => import('./components/ClassPage.js'));
@@ -15,8 +17,8 @@ const AllTeams = lazy(() => import('./pages/allteam.js'));
 const Team = lazy(() => import('./pages/Team.js'));
 const Admission = lazy(() => import('./pages/Admission.js'));
 const Intro = lazy(() => import('./home/home.js'));
-const Home2 = lazy(() => import('./chskanpurDehat/components/home.js'));
-const Pdf = lazy(() => import('./chskanpurDehat/pages/certificate.js'));
+// const Home2 = lazy(() => import('./chskanpurDehat/components/home.js'));
+const Pdf = lazy(() => import('./components/certificate.js'));
 const Gallery = lazy(() => import('./pages/gallery.js'));
 const Testi = lazy(() => import('./pages/testi.js'));
 const Client = lazy(() => import('./components/client3.js'));
@@ -63,14 +65,17 @@ const App = () => {
   } catch (error) {
     console.error('Error accessing localStorage:', error);
   }
-};
+  };
+
+
 
 
   return (
     <div className=' overflow-hidden'>
+
       <Router>
         <Routes>
-       
+
           <Route
             path="/Chs"
             element={
@@ -85,18 +90,7 @@ const App = () => {
                </ErrorBoundary>
             }
           />
-          <Route
-            path="/Chs-Kanpur-Dehat"
-            element={
-              <ErrorBoundary>
-              <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
-              <Loading/>
-            </div>}>
-                <Home2 />
-              </Suspense>
-              </ErrorBoundary>
-            }
-          />
+
           <Route
             path="/"
             element={
@@ -104,6 +98,26 @@ const App = () => {
               <Loading/>
             </div>}>
                 <Intro />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/Contact"
+            element={
+              <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
+              <Loading/>
+            </div>}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/SF"
+            element={
+              <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
+              <Loading/>
+            </div>}>
+                <Shuffle />
               </Suspense>
             }
           />
@@ -189,7 +203,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/mb"
+            path="/Administrator"
             element={
               <Suspense fallback={ <div className='flex justify-center h-screen w-screen items-center'>
               <Loading/>
@@ -321,4 +335,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { saveAs } from 'file-saver';
 import { FaFilePdf } from "react-icons/fa";
-import Footer from '../../pages/footer';
+import Footer from '../pages/footer';
 import { FaHome } from "react-icons/fa";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;

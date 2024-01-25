@@ -1,6 +1,6 @@
 import React from 'react';
 import PdfDownloader from './PdfDownloader.js';
-import Navbar from './navbar.js';
+import Navbar from '../pages/navbar.js';
 import {
   AcademicCalendar,
   LinkofPTA,
@@ -16,7 +16,7 @@ import {
   DEOCertificate,
   BuildingCertificate,
   affiliationletter
-} from "../../assets/index.js";
+} from "../assets/index.js";
 
 const App = () => {
   const pdfUrls = [
@@ -40,11 +40,11 @@ const App = () => {
   return (
     <div classname="relative ">
       <Navbar />
-     
+
       <div classname="flex flex-col mt-20">
-     
+
         <PdfDownloader pdfUrls={pdfUrls} />
-      </div> 
+      </div>
     </div>
   );
 };

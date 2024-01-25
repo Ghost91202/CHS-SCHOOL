@@ -4,6 +4,7 @@ import { FaHome } from 'react-icons/fa';
 import Anim from '../assets/mwesigwa-joel-jHvedTh-avo-unsplash (1).jpg';
 import gsap from 'gsap';
 import './YourStylesheet.css';
+import Footer from '../pages/footer';
 
 const Timing = () => {
   const cursorRef = useRef(null);
@@ -114,7 +115,7 @@ const Timing = () => {
           </div>
 
           <div className=" flex flex-col gap-10 md:pb-10 pt-20 md:pt-12">
-            <div c>
+            <div >
               <h1 className="text-6xl ">School Uniform</h1>
             </div>
             <div className="flex justify-between  h-auto w-3/4  md:pb-10">
@@ -183,7 +184,7 @@ const Timing = () => {
               <section id="importantPoints" className='flex flex-col gap-10'>
                <div className=' flex flex-col'>
                <h2 className='text-2xl font-bold'>Important Points for Parents</h2>
-                
+
                <div className='ml-4 w-3/4 mt-2'>
                <li>Read all instructions carefully for compliance.</li>
                 <li>Check the School Diary daily for Home-Work assignment, instructions of Class Teacher/Principal.</li>
@@ -193,7 +194,7 @@ const Timing = () => {
                 <li>Ensure that your ward uses the prescribed pattern of uniform.</li>
                 <li>Inform the school in writing of any change in residential addresses, telephone number, etc.</li>
                 <li>Parents must collect their ward’s Progress Report in person. Reports will not be given to the students.</li>
-             
+
                </div>
                </div>
 
@@ -224,13 +225,14 @@ const Timing = () => {
 
           </div>
          <div>
-          
+
          </div>
          </div>
 
         </div>
 
       </div>
+      <Footer/>
     </div>
   );
 };

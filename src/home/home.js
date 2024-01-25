@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Frontvideo from '../assets/chsintro.mp4';
 import logo from "../assets/logo2.png"
+import Modal from "../components/modal"
+import { Link } from 'react-router-dom';
 import "./home.css"
 const Home = () => {
+      const [showModal, setShowModal] = useState(false);
+    useEffect(() => {
+    // Set up a timer to show the modal after 20 seconds
+    const timerId = setTimeout(() => {
+      setShowModal(true);
+    }, 10000);
+
+    // Clear the timer when the component unmounts
+    return () => clearTimeout(timerId);
+  }, []);
     return (
         <div className='relative'>
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
+
             <div className='overflow-hidden  w-full h-screen absolute inset-0'>
                 <video autoPlay loop muted className='w-full h-screen object-cover'>
                     <source src={Frontvideo} type="video/mp4" className='h-screen w-screen md:w-full' />
@@ -45,11 +59,11 @@ const Home = () => {
                                         <div className='flex '>
                                             <nav className='nav cursor-pointer'>
                                                 <ul>
-                                                    <a href="/Chs"> <li>
+                                                    <Link to="/Chs"> <li>
                                                         kanpur
                                                         <span></span><span></span><span></span><span></span>
                                                     </li>
-                                                    </a>
+                                                    </Link>
                                                 </ul>
                                             </nav>
                                             <nav className='nav cursor-pointer'>

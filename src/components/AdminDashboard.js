@@ -9,7 +9,9 @@ import logo from "../assets/logo.png"
 import adduserimg from "../assets/PRE- PRIMARY 4.jpeg"
 import adduserimg2 from "../assets/PRE-PRIMARY ACT - 5 (1).jpg"
 import adduserimg3 from "../assets/WhatsApp Image 2023-05-22 at 17.29.56 (2).jpeg"
+// import ExcelDownloadButton from '../components/ExcelDownloadButton';
 const AdminDashboard = () => {
+    // const apiEndpoint = 'http://localhost:5000/all-data';
   const [allData, setAllData] = useState(null);
   const [formData, setFormData] = useState({
     email: '',
@@ -207,7 +209,7 @@ const AdminDashboard = () => {
 
 
 
-  // serach functionality 
+  // serach functionality
 
 
   return (
@@ -243,7 +245,7 @@ const AdminDashboard = () => {
                 {/* <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100  dark:hover:bg-red-600" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
 
                   <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Student</span>
-                 
+
                 </button> */}
                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                   <li>
@@ -473,9 +475,9 @@ const AdminDashboard = () => {
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               />
             </div>
-            
+
           </form>
-          
+
           <div className="mt-6">
             <button
               type="button"
@@ -494,7 +496,7 @@ const AdminDashboard = () => {
           </div>
           </div>
 
-          
+
         </Modal>
 
 
@@ -526,4 +528,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-
